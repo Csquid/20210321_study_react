@@ -2,8 +2,20 @@ import React, { Component } from 'react'
 
 class List extends Component {
   state = {  }
+  shouldComponentUpdate(newProps, newState) {
+    console.log(">>> Lists render shouldComponentUpdate");
+    if(this.props.data === newProps.data) {
+      return false;
+    }
+    return true;
+    // console.log(">>> Lists render shouldComponentUpdate"
+    //   , newProps.data
+    //   , this.props.data
+    // );
+  }
   render() { 
-    console.log('Lists Render');
+
+    console.log('>>> Lists render');
     
     let data = this.props.data;
     let lists = [];

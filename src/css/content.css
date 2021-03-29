@@ -1,0 +1,10 @@
+form input,
+form textarea {
+    box-sizing: border-box;
+    width: 200px;
+}
+
+form textarea {
+    resize: none;
+    height: 80px;
+}
